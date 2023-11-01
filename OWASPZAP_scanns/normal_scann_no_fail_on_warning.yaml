@@ -73,7 +73,7 @@ jobs:
   type: "spiderAjax"
 - parameters:
     template: "traditional-html"
-    reportDir: ""
+    reportDir: "../zap"
     reportFile: "ZAP_REPORT"
     reportTitle: "ZAP Baseline Scan Report"
     reportDescription: ""
