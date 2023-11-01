@@ -55,23 +55,6 @@ jobs:
   name: "spider"
   type: "spider"
 - parameters:
-    context: "Default Context"
-    user: ""
-    url: "http://localhost:4000"
-    maxDuration: 60
-    maxCrawlDepth: 10
-    numberOfBrowsers: 32
-    maxCrawlStates: 0
-    eventWait: 1
-    reloadWait: 1
-    clickDefaultElems: true
-    clickElemsOnce: true
-    randomInputs: true
-    inScopeOnly: true
-    runOnlyIfModern: false
-  name: "spiderAjax"
-  type: "spiderAjax"
-- parameters:
     template: "traditional-html"
     reportDir: "/home/filip/Downloads/TeamCity-2023.05.4/TeamCity/buildAgent/work/1c99d519673ab7a3/zap"
     reportFile: "ZAP_REPORT"
