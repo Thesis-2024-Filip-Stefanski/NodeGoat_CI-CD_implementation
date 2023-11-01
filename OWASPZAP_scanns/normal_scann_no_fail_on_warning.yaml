@@ -97,7 +97,7 @@ jobs:
   type: "report"
 - parameters:
     template: "traditional-md"
-    reportDir: "/zap"
+    reportDir: "./zap"
     reportFile: "ZAP_ALERT_REPORT"
     reportTitle: "ZAP Scanning Report"
     reportDescription: "This is report that should contain only alerts that should\
