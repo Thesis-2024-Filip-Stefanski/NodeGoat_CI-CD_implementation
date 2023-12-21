@@ -3,7 +3,7 @@ env:
   contexts:
   - name: "Default Context"
     urls:
-    - "http://localhost:4000/"
+    - "http://1c99d519673ab7a3_web_1:4000/"
     includePaths: []
     excludePaths: []
     authentication:
@@ -26,7 +26,7 @@ jobs:
 - parameters:
     context: "Default Context"
     user: ""
-    url: "http://localhost:4000/"
+    url: "http://1c99d519673ab7a3_web_1:4000/"
     maxDuration: 0
     maxDepth: 0
     maxChildren: 0
@@ -44,24 +44,29 @@ jobs:
     requestWaitTime: 0
     sendRefererHeader: true
     userAgent: ""
-  name: "spider"
-  type: "spider"
   tests:
   - onFail: "INFO"
     statistic: "automation.spider.urls.added"
     site: ""
     operator: ">="
     value: 100
-    name: "At least 100 URLs found"
     type: "stats"
+    name: "At least 100 URLs found"
+  name: "spider"
+  type: "spider"
 - parameters:
     maxDuration: 0
   name: "passiveScan-wait"
   type: "passiveScan-wait"
 - parameters:
+    time: "5"
+    fileName: ""
+  name: "delay"
+  type: "delay"
+- parameters:
     context: "Default Context"
     user: ""
-    url: "http://localhost:4000/"
+    url: "http://1c99d519673ab7a3_web_1:4000/"
     maxDuration: 60
     maxCrawlDepth: 10
     numberOfBrowsers: 32
