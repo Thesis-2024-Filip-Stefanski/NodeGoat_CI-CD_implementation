@@ -44,6 +44,8 @@ jobs:
     requestWaitTime: 0
     sendRefererHeader: true
     userAgent: ""
+  name: "spider"
+  type: "spider"
   tests:
   - onFail: "INFO"
     statistic: "automation.spider.urls.added"
@@ -52,8 +54,10 @@ jobs:
     value: 100
     name: "At least 100 URLs found"
     type: "stats"
-  name: "spider"
-  type: "spider"
+- parameters:
+    maxDuration: 0
+  name: "passiveScan-wait"
+  type: "passiveScan-wait"
 - parameters:
     context: "Default Context"
     user: ""
@@ -72,6 +76,10 @@ jobs:
   name: "spiderAjax"
   type: "spiderAjax"
 - parameters:
+    maxDuration: 0
+  name: "passiveScan-wait"
+  type: "passiveScan-wait"
+- parameters:
     template: "traditional-html"
     reportDir: "/zap"
     reportFile: "ZAP_REPORT"
@@ -79,20 +87,20 @@ jobs:
     reportDescription: ""
     displayReport: false
   risks:
-    - "info"
-    - "low"
-    - "medium"
-    - "high"
+  - "info"
+  - "low"
+  - "medium"
+  - "high"
   confidences:
-    - "falsepositive"
-    - "low"
-    - "medium"
-    - "high"
-    - "confirmed"
+  - "falsepositive"
+  - "low"
+  - "medium"
+  - "high"
+  - "confirmed"
   sections:
-    - "instancecount"
-    - "alertdetails"
-    - "alertcount"
+  - "instancecount"
+  - "alertdetails"
+  - "alertcount"
   name: "report"
   type: "report"
 - parameters:
@@ -104,16 +112,17 @@ jobs:
       \ fail the pipeline and be revisited by a team member"
     displayReport: false
   risks:
-    - "low"
-    - "medium"
-    - "high"
+  - "low"
+  - "medium"
+  - "high"
   confidences:
-    - "low"
-    - "medium"
-    - "high"
-    - "confirmed"
+  - "low"
+  - "medium"
+  - "high"
+  - "confirmed"
   sections:
-    - "alertdetails"
-    - "alertcount"
+  - "alertdetails"
+  - "alertcount"
   name: "alert-report"
   type: "report"
+
