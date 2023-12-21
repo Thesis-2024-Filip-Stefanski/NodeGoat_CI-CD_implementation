@@ -30,6 +30,7 @@ jobs:
     maxDuration: 60
     maxCrawlDepth: 10
     numberOfBrowsers: 32
+    browserId: "chrome"
     maxCrawlStates: 0
     eventWait: 1
     reloadWait: 1
