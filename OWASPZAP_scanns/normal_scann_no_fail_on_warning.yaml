@@ -3,7 +3,7 @@ env:
   contexts:
   - name: "Default Context"
     urls:
-    - "http://localhost:4000"
+    - "http://localhost:4000/"
     includePaths: []
     excludePaths: []
     authentication:
@@ -26,7 +26,7 @@ jobs:
 - parameters:
     context: "Default Context"
     user: ""
-    url: "http://localhost:4000"
+    url: "http://localhost:4000/"
     maxDuration: 60
     maxCrawlDepth: 10
     numberOfBrowsers: 32
@@ -44,50 +44,4 @@ jobs:
     maxDuration: 0
   name: "passiveScan-wait"
   type: "passiveScan-wait"
-- parameters:
-    template: "traditional-html"
-    reportDir: "/zap"
-    reportFile: "ZAP_REPORT"
-    reportTitle: "ZAP Baseline Scan Report"
-    reportDescription: ""
-    displayReport: false
-  risks:
-  - "info"
-  - "low"
-  - "medium"
-  - "high"
-  confidences:
-  - "falsepositive"
-  - "low"
-  - "medium"
-  - "high"
-  - "confirmed"
-  sections:
-  - "instancecount"
-  - "alertdetails"
-  - "alertcount"
-  name: "report"
-  type: "report"
-- parameters:
-    template: "traditional-md"
-    reportDir: "/zap"
-    reportFile: "ZAP_ALERT_REPORT"
-    reportTitle: "ZAP Scanning Report"
-    reportDescription: "This is report that should contain only alerts that should\
-      \ fail the pipeline and be revisited by a team member"
-    displayReport: false
-  risks:
-  - "low"
-  - "medium"
-  - "high"
-  confidences:
-  - "low"
-  - "medium"
-  - "high"
-  - "confirmed"
-  sections:
-  - "alertdetails"
-  - "alertcount"
-  name: "alert-report"
-  type: "report"
 
