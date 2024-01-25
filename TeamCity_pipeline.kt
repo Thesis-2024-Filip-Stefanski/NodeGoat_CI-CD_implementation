@@ -6,8 +6,8 @@ import jetbrains.buildServer.configs.kotlin.v2018_2.buildSteps.dockerCompose
 import jetbrains.buildServer.configs.kotlin.v2018_2.buildSteps.powerShell
 import jetbrains.buildServer.configs.kotlin.v2018_2.triggers.vcs
 
-object Build : BuildType({
-    name = "Build"
+object NodeGoatTeamCityCiCdImplementation : BuildType({
+    name = "NodeGoat_TeamCity_CI-CD_implementation"
 
     artifactRules = """
         OWASPZAP_scanns\zap\ZAP_REPORT.html
@@ -20,7 +20,7 @@ object Build : BuildType({
 
     steps {
         dockerCompose {
-            name = "Run application"
+            name = "Build application"
             file = "docker-compose.yml"
         }
         powerShell {
