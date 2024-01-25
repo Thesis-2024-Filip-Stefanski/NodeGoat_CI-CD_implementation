@@ -15,7 +15,7 @@ object Build : BuildType({
     """.trimIndent()
 
     vcs {
-        root(HttpsGithubComThesis2024FilipStefanskiNodeGoatCiCdImplementation)
+        root(HttpsGithubComThesis2024FilipStefanskiNodeGoatTeamCityCiCdImplementation)
     }
 
     steps {
