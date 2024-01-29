@@ -33,7 +33,7 @@ object NodeGoatTeamCityCiCdImplementation : BuildType({
                     
                     # Run OWASP ZAP
                     cd 'D:\OWASPZAP\Zed Attack Proxy\'
-                    .\zap.bat -cmd -autorun ${'$'}path\OWASPZAP_scanns\NodeGoat_full.yaml
+                    .\zap.bat -cmd -autorun ${'$'}path\OWASPZAP_scanns\NodeGoat_Complete.yaml
                 """.trimIndent()
             }
         }
